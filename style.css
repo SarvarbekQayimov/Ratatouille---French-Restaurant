@@ -1,0 +1,219 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #333;
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+h1, h2, h3 {
+    margin: 0;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Banner Styles */
+header {
+    background: url('images/banner.jpg') no-repeat center center/cover;
+    height: 100vh; /* Makes the header take the full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+    text-align: center;
+    padding-top: 60px; /* Adds space for the navbar */
+}
+
+header .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Keeps the banner image in the background */
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Ensures page content doesn't go under navbar */
+body {
+    padding-top: 60px; /* Prevents content from going under the fixed navbar */
+}
+
+section {
+    padding: 50px;
+    margin-top: 60px;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed; /* Makes the navbar stick to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent; /* Default background */
+    z-index: 1000; /* Ensures navbar stays on top */
+    display: flex;
+    justify-content: space-between; /* Aligns restaurant name and nav links to opposite sides */
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease; /* Smooth transition for background color */
+}
+
+.navbar.scrolled {
+    background: rgba(0, 0, 0, 0.7); /* Background when scrolled */
+}
+
+.navbar .restaurant-name {
+    font-size: 24px;
+    color: white;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin: 0 15px;
+}
+
+.navbar .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Menu Section */
+.menu-section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+.menu-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.menu-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+.menu-item span {
+    font-size: 1.2rem;
+    color: #ff3e00;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    padding: 3rem 2rem;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-between;
+}
+.about-section img {
+    width: 35%;
+    border-radius: 10px;
+}
+
+/* Reservation Form */
+.reservation-section {
+    padding: 2rem;
+    background-color: #f8f8f8;
+}
+.reservation-section form {
+    display: grid;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.reservation-section input, .reservation-section button {
+    padding: 10px;
+    font-size: 1rem;
+}
+.reservation-section button {
+    background-color: #ff3e00;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.reservation-section button:hover {
+    background-color: #e22e00;
+}
+
+/* Reviews Section */
+.reviews-section {
+    padding: 3rem 2rem;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+.reviews-section .review {
+    background-color: white;
+    padding: 20px;
+    margin: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.reviews-section .review p {
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 3rem 2rem;
+    background-color: #fff;
+    text-align: center;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
